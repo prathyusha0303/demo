@@ -16,10 +16,10 @@ public class RentalService implements RentalCostCalculator {
     private List<Rental> rentals;
    
     
-  public RentalService(List<Vehicle> vehicles, List<Rental> rentals) {
-		this.vehicles = vehicles;
-		this.rentals = rentals;
-	}
+    public RentalService() {
+        vehicles = new ArrayList<>();
+        rentals = new ArrayList<>();
+    }
 
 	//  rentalSystem.addVehicle(car);
     public void addVehicle(Vehicle vehicle) {
@@ -29,9 +29,7 @@ public class RentalService implements RentalCostCalculator {
     public void removeVehicle(Vehicle vehicle) {
         vehicles.remove(vehicle);
     }
-	public RentalService() {
-		vehicles=new ArrayList<>();
-	}
+	
 
 	@Override
 	public BigDecimal calculateRentalCost(Rental rental) {
