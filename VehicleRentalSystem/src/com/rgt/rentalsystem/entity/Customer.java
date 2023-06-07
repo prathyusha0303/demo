@@ -2,23 +2,24 @@ package com.rgt.rentalsystem.entity;
 
 public class Customer {
 
-	private Integer customerId;
+	private String customerId;
 	private String firstName;
 	private String lastName;
 	private Long phoneNumber;
 	
 	
-	public Customer(Integer customerId, String firstName, String lastName, Long phoneNumber) {
+	public Customer(String customerId, String firstName, String lastName) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.phoneNumber = phoneNumber;
+		
 	}
-	public Integer getCustomerId() {
+	
+	public String getCustomerId() {
 		return customerId;
 	}
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 	public String getFirstName() {

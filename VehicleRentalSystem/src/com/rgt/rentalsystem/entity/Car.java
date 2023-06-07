@@ -1,37 +1,11 @@
 package com.rgt.rentalsystem.entity;
 
 public class Car extends Vehicle{
+	    private int numberOfSeats;
 
-	public Car(String licensePlate, String make, String model, String carName,
-			Integer numberOfDoors) {
-		super(licensePlate, make, model);
-		CarName = carName;
-		this.numberOfDoors = numberOfDoors;
-	}
+	    public Car(String licensePlate, String make, String model, int numberOfSeats) {
+	        super(licensePlate, make, model);
+	        this.numberOfSeats = numberOfSeats;
+	    }
 
-	private String CarName;
-	private Integer numberOfDoors;
-	
-	public String getCarName() {
-		return CarName;
-	}
-
-	public void setCarName(String carName) {
-		CarName = carName;
-	}
-
-	public Integer getNumberOfDoors() {
-		return numberOfDoors;
-	}
-
-	public void setNumberOfDoors(Integer numberOfDoors) {
-		this.numberOfDoors = numberOfDoors;
-	}
-
-	@Override
-	public String toString() {
-		return "Car [CarName=" + CarName + ", numberOfDoors=" + numberOfDoors + "]";
-	}
-	
-	
 }
